@@ -24,12 +24,7 @@ function lerfabricantes(PDO $conexao ){
         die("Erro:" .$erro->getMessage());
     }
 
-    
-    return $resultado;
-
-    
+    return $resultado;    
 }
 
-//teste
-$dados = lerfabricantes($conexao);
-var_dump($dados);
+//Fazer a visualização disso no arquivo visializar.php

@@ -1,3 +1,9 @@
+<?php
+/* Importanto as funções de manipulação de fabricantes */
+require_once "../src/funcoes-fabricantes.php";
+$listaDeFabricantes = lerfabricantes($conexao);
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
