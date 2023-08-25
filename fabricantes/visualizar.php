@@ -72,7 +72,10 @@ $listaDeFabricantes = lerfabricantes($conexao);
         <tr>
             <td><?=$listaDeFabricante["id"]?></td>
             <td><?=$listaDeFabricante["nome"]?></td>
-            <td><a href="">Editar</a>  <a href="">Excluir</a></td>                
+            <td>
+                <a href="">Editar</a>  
+                <a href="">Excluir</a> 
+            </td>                
         </tr>      
    <?php       
      }
