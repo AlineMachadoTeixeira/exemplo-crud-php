@@ -74,4 +74,23 @@ function lerUmFabricante(PDO $conexao, int $idFabricante){
 
 } //Fim lerUmFabricante
 
+//Exercício: IMPLEMENTE A FUNÇÃO ABAIXO
+function atualizarFabricante(PDO $conexao, string $novoNomeFabricante, int $IdFabricante){
+    $sql = "UPDATE fabricantes SET nome = :nome WHERE id = :id"; 
+
+
+    try {
+        $consulta = $conexao->prepare($sql);        
+        $consulta->bindValue(":nome", $novoNomeFabricante, PDO::PARAM_STR);
+        $consulta->bindValue(":id", $IdFabricante, PDO::PARAM_INT);
+        $consulta->execute();
+       
+    } catch (Exception $erro) {
+        die ("Erro novo fabricante: ".$erro->getMessage());
+    }
+
+    
+
+}//Fim atualizarFabricante
+
 
