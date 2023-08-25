@@ -2,6 +2,10 @@
 /* Importanto as funções de manipulação de fabricantes */
 require_once "../src/funcoes-fabricantes.php";
 $listaDeFabricantes = lerfabricantes($conexao);
+
+
+/* Contando quantos fabricantes temos na matriz  $listaDeFabricantes*/
+$quantidade = count($listaDeFabricantes);
 ?>
 
 <!DOCTYPE html>
@@ -58,7 +62,7 @@ $listaDeFabricantes = lerfabricantes($conexao);
 
     <!-- Fazer a saída de dados com uma tabela -->
     <table>
-        <caption>Lista de Fabricantes</caption>
+        <caption>Lista de Fabricantes <b><?=$quantidade?></b></caption>
         <tr>
             <th>ID</th>
             <th>Nome</th>
@@ -73,7 +77,11 @@ $listaDeFabricantes = lerfabricantes($conexao);
             <td><?=$listaDeFabricante["id"]?></td>
             <td><?=$listaDeFabricante["nome"]?></td>
             <td>
-                <a href="">Editar</a>  
+            <!-- Criar um link Dinamico vamos pegar o id, pois cada fabricante tem seu id 
+
+            Link Dinamico 
+            A URL do href precisa de parâmetro com dados dinamicois (no caso, o ID de cada fabricante)-->
+                <a href="atualizar.php?id=<?=$listaDeFabricante["id"]?>">Editar</a>  
                 <a href="">Excluir</a> 
             </td>                
         </tr>      

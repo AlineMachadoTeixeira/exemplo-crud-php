@@ -42,6 +42,10 @@ if( isset($_POST['inserir'])){
 
     </form>
 
+    <hr>
+    <p><a href="visualizar.php">Voltar</a></p>
+
+
     
     
 </body>
