@@ -94,7 +94,7 @@ function atualizarFabricante(PDO $conexao, string $novoNomeFabricante, int $IdFa
 
 
 // Excluir um fabricante  Usada em fabricantes/atualizar.php
-function execluirFabricante(PDO $conexao,  int $id){
+function excluirFabricante(PDO $conexao,  int $id){
     $sql = "DELETE FROM fabricantes  WHERE id = :id";  //! COLOQUE O WHERE! Senão deleta tudo ☠️ 
 
     try {
@@ -104,7 +104,7 @@ function execluirFabricante(PDO $conexao,  int $id){
        
     } catch (Exception $erro) {
         die ("Erro no delete do fabricante: ".$erro->getMessage());
-        
+
     }
 }//Fim execluirFabricante
 
