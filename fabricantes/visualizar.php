@@ -60,6 +60,18 @@ $quantidade = count($listaDeFabricantes);
         <a href="inserir.php">Inserir novo fabricante</a>
     </p>
 
+    <!-- Feedback/mensagem para o usuário indicando que o processo deu certo. Vai parecer a mensagem do h2 assim que Edita/Atualizar o fabricante -->
+    <?php
+    if(isset($_GET["status"]) && $_GET["status"] ==="sucesso"){
+    ?>
+
+    <h2 style="color:blue">Fabricante atualizado com sucesso</h2>
+
+    
+    <?php
+    }    
+    ?>
+
     <!-- Fazer a saída de dados com uma tabela -->
     <table>
         <caption>Lista de Fabricantes <b><?=$quantidade?></b></caption>
@@ -70,19 +82,19 @@ $quantidade = count($listaDeFabricantes);
         </tr>
 
    <?php 
-   foreach ($listaDeFabricantes  as $listaDeFabricante ){       
+   foreach ($listaDeFabricantes  as $fabricante ){       
    ?>  
             
         <tr>
-            <td><?=$listaDeFabricante["id"]?></td>
-            <td><?=$listaDeFabricante["nome"]?></td>
+            <td><?=$fabricante["id"]?></td>
+            <td><?=$fabricante["nome"]?></td>
             <td>
             <!-- Criar um link Dinamico vamos pegar o id, pois cada fabricante tem seu id 
 
             Link Dinamico 
             A URL do href precisa de parâmetro com dados dinamicois (no caso, o ID de cada fabricante)-->
-                <a href="atualizar.php?id=<?=$listaDeFabricante["id"]?>">Editar</a>  
-                <a href="">Excluir</a> 
+                <a href="atualizar.php?id=<?=$fabricante["id"]?>">Editar</a>  
+                <a href="excluir.php?id=<?=$fabricante["id"]?>">Excluir</a> 
             </td>                
         </tr>      
    <?php       

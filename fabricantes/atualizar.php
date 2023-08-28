@@ -11,7 +11,11 @@ $fabricante = lerUmFabricante($conexao, $id);
 if ( isset($_POST ['atualizar'])){
     $nome = filter_input(INPUT_POST, "nome", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     atualizarFabricante($conexao, $nome, $id);
-    header("location:visualizar.php");
+
+    // header("location:visualizar.php");
+    header("location:visualizar.php?status=sucesso");
+    // ?status=sucesso para mostar mensagem
+
 }
 
 ?>
