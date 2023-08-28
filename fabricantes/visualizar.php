@@ -94,7 +94,8 @@ $quantidade = count($listaDeFabricantes);
             Link Dinamico 
             A URL do href precisa de parâmetro com dados dinamicois (no caso, o ID de cada fabricante)-->
                 <a href="atualizar.php?id=<?=$fabricante["id"]?>">Editar</a>  
-                <a href="excluir.php?id=<?=$fabricante["id"]?>">Excluir</a> 
+                <a class="excluir" href="excluir.php?id=<?=$fabricante["id"]?>">Excluir</a> 
+                <!-- class="excluir" para usar o javascript -->
             </td>                
         </tr>      
    <?php       
@@ -102,5 +103,6 @@ $quantidade = count($listaDeFabricantes);
    ?>
     </table>
     
+    <script src="../js/confirma-exclusao.js"></script>
 </body>
 </html>
