@@ -104,6 +104,7 @@ function execluirFabricante(PDO $conexao,  int $id){
        
     } catch (Exception $erro) {
         die ("Erro no delete do fabricante: ".$erro->getMessage());
+        
     }
 }//Fim execluirFabricante
 
