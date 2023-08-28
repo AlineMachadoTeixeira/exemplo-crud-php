@@ -1,19 +1,12 @@
 <!-- Fazer o excluir funcionar -->
-<?php
-
-    //Inportando as função e conexão 
-    require_once "../src/funcoes-fabricantes.php";
-
-    /* Obtendo e sanitizando o valor vindo do parâmetro de URL (link dinâmico) */
-    $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
-
-    /* Chamando a função e excluir os dados de um fabricante de acordo com id passado */
+<?php    
+    require_once "../src/funcoes-fabricantes.php";    
+    $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);   
     $fabricante = lerUmFabricante($conexao, $id);
-
     if ( isset($_POST ['excluir'])){
         $nome = filter_input(INPUT_POST, "nome", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-        deleteFabricante($conexao, $nome, $id);
-        // header("location:visualizar.php");
+        execluirFabricante($conexao, $id);
+        header("location:visualizar.php");
     }
 ?>
 
@@ -24,7 +17,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fabricantes - Ixcluir</title>
+    <title>Fabricantes - Ixclusão</title>
 </head>
 <body>
     <!-- Atualização | Excluir -->
