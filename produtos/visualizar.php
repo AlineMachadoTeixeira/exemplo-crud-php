@@ -1,3 +1,10 @@
+<?php
+require_once "../src/funcoes-produtos.php";
+$listaDeProdutos = lerProdutos($conexao);
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -56,17 +63,19 @@
 </p>
 
 <div class="produtos">
+
+    <?php 
+    foreach( $listaDeProdutos as $produto){ 
+    ?>
     <article class="produto">
-        <h3>Nome do produto...</h3>
-        <p><b>Preço:</b>....</p>
-        <p><b>Quantidade:</b>.....</p>
+        <h3><?=$produto["nome"]?></h3>
+        <p><b>Preço:</b> <?=$produto["preco"]?></p>
+        <p><b>Quantidade:</b> <?=$produto["quantidade"]?></p>
     </article>
 
-    <article class="produto">
-        <h3>Nome do produto...</h3>
-        <p><b>Preço:</b>....</p>
-        <p><b>Quantidade:</b>.....</p>
-    </article>
+    <?php
+    }
+    ?>   
 
 </div>
     
