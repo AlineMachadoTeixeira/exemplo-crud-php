@@ -77,7 +77,7 @@ require_once "../src/funcoes-utilitarias.php";
         <p><b>Preço:</b> <?=formatarPreco($produto["preco"])?></p> <!-- formatarPreco pegou da pasta ../src/funcoes-utilitarias.php -->
         <p><b>Quantidade:</b> <?=$produto["quantidade"]?></p>
 
-              <!-- Exercício/Desafio 02 somar preço e quantidade e fazer o tatal -->
+              <!-- Exercício/Desafio 02 somar preço e quantidade e fazer o total -->
 
          <!-- Solução 1: fazer a conta diretamente e passar o resultado pra formatação do preço -->
         <P><b>Total solução 1:</b><?=formatarPreco($produto["preco"] * $produto["quantidade"])?></P>
