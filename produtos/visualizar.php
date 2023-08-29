@@ -77,19 +77,19 @@ require_once "../src/funcoes-utilitarias.php";
         <p><b>Preço:</b> <?=formatarPreco($produto["preco"])?></p> <!-- formatarPreco pegou da pasta ../src/funcoes-utilitarias.php -->
         <p><b>Quantidade:</b> <?=$produto["quantidade"]?></p>
 
-              <!-- Exer -->
+              <!-- Exercício/Desafio 02 somar preço e quantidade e fazer o tatal -->
 
          <!-- Solução 1: fazer a conta diretamente e passar o resultado pra formatação do preço -->
         <P><b>Total solução 1:</b><?=formatarPreco($produto["preco"] * $produto["quantidade"])?></P>
 
 
         <!-- Solução 2: Fazer a conta direto na query SQL e pegar
-            o resultado (coluna total) - além de passar pra formatação-->
+            o resultado (coluna total) - além de passar pra formatação pasta funcoes-produto.php linha 15-->
         <P><b>Total solução 2 :</b><?=formatarPreco($produto["preco"] * $produto["quantidade"])?></P>
 
 
          <!-- Solução 3) Fazer uma função de cálculo e pegar o 
-            resultado dela já calculado e formatado -->
+            resultado dela já calculado e formatado  função-utilitaria.php  linha 12-->
         <p><b>Total solução 3:</b> 
         <?=calcularTotal($produto["preco"], $produto["quantidade"])?></p>
     </article>
