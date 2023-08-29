@@ -5,7 +5,8 @@ require_once "conecta.php";
 
 //Usada em fabricantes/visualizar.php
 // PDO $conexao esta no arquino conecta.php linha 23
-function lerfabricantes(PDO $conexao ){
+                                      //:array pois retorna linha 29
+function lerfabricantes(PDO $conexao ):array {
     $sql = "SELECT * FROM fabricantes ORDER BY nome";
 
     try{
@@ -34,7 +35,8 @@ function lerfabricantes(PDO $conexao ){
 
 
 // /Usada em fabricantes/inserir.php
-function inserirFabricante(PDO $conexao, string $nomeDoFabricante ){
+                                                                  // :void   Funcão quer não tem retorno 
+function inserirFabricante(PDO $conexao, string $nomeDoFabricante ):void{
     /* :qualquer coisa (que está VALUES(:nome)) --> isso indica um "named paramenter"(parâmentro nomeado) */
     $sql = "INSERT INTO fabricantes(nome) VALUES(:nome)";
 
@@ -53,7 +55,8 @@ function inserirFabricante(PDO $conexao, string $nomeDoFabricante ){
 
 
 // Usada em fabricantes/atualizar.php
-function lerUmFabricante(PDO $conexao, int $idFabricante){
+                                                        //:array pois retorna linha 75
+function lerUmFabricante(PDO $conexao, int $idFabricante):array{
     $sql = "SELECT * FROM fabricantes WHERE id = :id";
 
     try {
@@ -75,7 +78,7 @@ function lerUmFabricante(PDO $conexao, int $idFabricante){
 } //Fim lerUmFabricante
 
 //Exercício: IMPLEMENTE A FUNÇÃO ABAIXO
-function atualizarFabricante(PDO $conexao, string $novoNomeFabricante, int $IdFabricante){
+function atualizarFabricante(PDO $conexao, string $novoNomeFabricante, int $IdFabricante):void{
     $sql = "UPDATE fabricantes SET nome = :nome WHERE id = :id"; 
 
     try {
@@ -94,7 +97,7 @@ function atualizarFabricante(PDO $conexao, string $novoNomeFabricante, int $IdFa
 
 
 // Excluir um fabricante  Usada em fabricantes/atualizar.php
-function excluirFabricante(PDO $conexao,  int $id){
+function excluirFabricante(PDO $conexao,  int $id):void{
     $sql = "DELETE FROM fabricantes  WHERE id = :id";  //! COLOQUE O WHERE! Senão deleta tudo ☠️ 
 
     try {
