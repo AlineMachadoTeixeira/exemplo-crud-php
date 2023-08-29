@@ -16,13 +16,32 @@ $quantidade = count($listaDeFabricantes);
     <title>Fabricantes - Visualização</title>
 
     <style>
+
+        *{box-sizing: border-box;}
+
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 18px;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        p a{
+            font-size: 25px;
+            margin: 10px;
+        }
         
+        table{            
+            box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+        }
 
         table, td, tr {
              border: 1px solid; 
              border-collapse: collapse;  
              margin: auto; 
-             background-color: cornsilk;          
+             background-color: cornsilk          
         }      
         
         caption{          
@@ -41,7 +60,7 @@ $quantidade = count($listaDeFabricantes);
         }      
 
         tr:hover{
-            background-color: bisque;
+            background-color: cornsilk;
             color: #000000;
         }
     </style>

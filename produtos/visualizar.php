@@ -7,22 +7,40 @@
     <style>
 
         *{box-sizing: border-box;}
+
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 18px;
+        }        
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        p a{
+            font-size: 25px;
+            margin: 10px;
+        }
         
 
         .produtos{
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;          
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
-            width: 80%;
+            gap: 10px;
+            width: 70%;
             margin: auto;
+            margin-top: 30px;
+            font-size: 16px;
+            
         }
 
         .produto {
             background-color:cornsilk;
             padding: 1rem;
             width: 49%;
-            box-shadow: 0 0 3px 1px rgba(0, 0, 0, 2);
+            border-radius: 10px;
+            box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
 
         }
     </style>
