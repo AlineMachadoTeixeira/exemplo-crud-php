@@ -7,3 +7,11 @@ function formatarPreco( float $valor ) :string {
  return "R$ " . $valorFormatado;
 
 }
+
+
+function calcularTotal(float $valor, int $qtd):string {
+    $total = $valor * $qtd;
+    return formatarPreco($total);
+}
+
+

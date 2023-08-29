@@ -72,9 +72,26 @@ require_once "../src/funcoes-utilitarias.php";
     foreach( $listaDeProdutos as $produto){ 
     ?>
     <article class="produto">
-        <h3><?=$produto["nome"]?></h3>
+        <h3><?=$produto["produto"]?></h3> <!-- ["produto"] por causa da "../src/funcoes-produtos.php" linha 11 --> 
+        <h4><?=$produto["fabricante"]?></h4> <!-- ["fabricante"] por causa da "../src/funcoes-produtos.php" linha 14 -->
         <p><b>Preço:</b> <?=formatarPreco($produto["preco"])?></p> <!-- formatarPreco pegou da pasta ../src/funcoes-utilitarias.php -->
         <p><b>Quantidade:</b> <?=$produto["quantidade"]?></p>
+
+              <!-- Exer -->
+
+         <!-- Solução 1: fazer a conta diretamente e passar o resultado pra formatação do preço -->
+        <P><b>Total solução 1:</b><?=formatarPreco($produto["preco"] * $produto["quantidade"])?></P>
+
+
+        <!-- Solução 2: Fazer a conta direto na query SQL e pegar
+            o resultado (coluna total) - além de passar pra formatação-->
+        <P><b>Total solução 2 :</b><?=formatarPreco($produto["preco"] * $produto["quantidade"])?></P>
+
+
+         <!-- Solução 3) Fazer uma função de cálculo e pegar o 
+            resultado dela já calculado e formatado -->
+        <p><b>Total solução 3:</b> 
+        <?=calcularTotal($produto["preco"], $produto["quantidade"])?></p>
     </article>
 
     <?php
