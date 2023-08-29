@@ -3,6 +3,10 @@ require_once "../src/funcoes-produtos.php";
 $listaDeProdutos = lerProdutos($conexao);
 ?>
 
+<?php
+require_once "../src/funcoes-utilitarias.php";
+?>
+
 
 
 <!DOCTYPE html>
@@ -69,7 +73,7 @@ $listaDeProdutos = lerProdutos($conexao);
     ?>
     <article class="produto">
         <h3><?=$produto["nome"]?></h3>
-        <p><b>Preço:</b> <?=$produto["preco"]?></p>
+        <p><b>Preço:</b> <?=formatarPreco($produto["preco"])?></p> <!-- formatarPreco pegou da pasta ../src/funcoes-utilitarias.php -->
         <p><b>Quantidade:</b> <?=$produto["quantidade"]?></p>
     </article>
 
