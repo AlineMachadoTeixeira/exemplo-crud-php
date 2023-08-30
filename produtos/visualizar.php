@@ -27,25 +27,23 @@ require_once "../src/funcoes-utilitarias.php";
         h1, h2 {
             text-align: center;
         }
-
         p a{
             font-size: 25px;
             margin: 10px;
         }
-        
-
+        h3{            
+            color: #0056b3;           
+        } 
         .produtos{
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;          
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
-            width: 70%;
+            width: 60%;
             margin: auto;
             margin-top: 30px;
-            font-size: 16px;
-            
+            font-size: 16px;            
         }
-
         .produto {
             background-color:cornsilk;
             padding: 1rem;

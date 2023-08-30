@@ -128,7 +128,7 @@ if(isset($_POST['inserir'])){
         </p>
 
         <p>
-            <label for="descricao">Descricao:</label><br>
+            <label for="descricao">Descrição:</label><br>
             <textarea name="descricao" id="descricao" cols="30" rows="3"></textarea>
         </p>
 
