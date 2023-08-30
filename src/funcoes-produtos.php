@@ -31,6 +31,18 @@ function lerProdutos(PDO $conexao):array{
 }
 
 
+function  inserirProduto(
+   PDO $conexao, 
+   string $nome, 
+   float $preco, 
+   int $quantidade, 
+   int $fabricanteId, 
+   string $descricao
+   ):void {
+      
+   }
+
+
 
 
   
