@@ -9,6 +9,7 @@ require_once "../src/funcoes-utilitarias.php";
 
 
 
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -27,10 +28,10 @@ require_once "../src/funcoes-utilitarias.php";
         h1, h2 {
             text-align: center;
         }
-        p a{
+        /* p a{
             font-size: 25px;
             margin: 10px;
-        }
+        } */
         h3{            
             color: #0056b3;           
         } 
@@ -50,6 +51,25 @@ require_once "../src/funcoes-utilitarias.php";
             width: 49%;
             border-radius: 10px;
             box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+
+        }
+
+        .botao{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .editar{
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;           
+            border: none;            
+            border-radius: 4px;            
+            padding: 8px 25px;            
+            cursor: pointer;
+            background-color: #0056b3;
+            text-decoration: none;
+            
 
         }
     </style>
@@ -90,6 +110,15 @@ require_once "../src/funcoes-utilitarias.php";
             resultado dela já calculado e formatado  função-utilitaria.php  linha 12-->
         <p><b>Total solução 3:</b> 
         <?=calcularTotal($produto["preco"], $produto["quantidade"])?></p>
+
+        <hr>
+
+        <p class="botao">
+            <!-- Link dinanmico é o "atualizar.php?id $produto["id"]?>" -->
+            <a class="editar" href="atualizar.php?id=<?=$produto["id"]?>">Editar</a>
+            
+            <a class="editar" href="excluir.php?id=<?=$produto["id"]?>">Excluir</a>
+        </p>
     </article>
 
     <?php
