@@ -86,10 +86,21 @@ function  inserirProduto(
 
     return $resultado;    
 
-} //Fim lerUmProdutos
+} //Fim inserirProduto
 
 
 
+function atualizarProduto(
+  PDO $conexao, 
+  int $id, 
+  string $nome, 
+  float $preco, 
+  int $quantidade, 
+  string $descricao,
+  int $fabricanteId
+){
+
+} //Fim atualizarProduto
 
 
 
