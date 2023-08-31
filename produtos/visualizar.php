@@ -117,7 +117,7 @@ require_once "../src/funcoes-utilitarias.php";
             <!-- Link dinanmico é o "atualizar.php?id $produto["id"]?>" -->
             <a class="editar" href="atualizar.php?id=<?=$produto["id"]?>">Editar</a>
             
-            <a class="editar" href="excluir.php?id=<?=$produto["id"]?>">Excluir</a>
+            <a class=" editar excluir"  href="excluir.php?id=<?=$produto["id"]?>">Excluir</a>
         </p>
     </article>
 
@@ -127,5 +127,7 @@ require_once "../src/funcoes-utilitarias.php";
 
 </div>
     
+<!-- Para perguntar para o usuraio se realmente deseja excluir o produto usamos a class "excluir" -->
+<script src="../js/confirma-exclusao.js"></script>
 </body>
 </html>
