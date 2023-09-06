@@ -143,4 +143,3 @@ function excluirProduto(PDO $conexao, int $id):void{
 }//Fim excluirProduto
   
 
-  

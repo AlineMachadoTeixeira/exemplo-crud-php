@@ -1,5 +1,5 @@
 <?php
-//  2º parte
+
 /* Importando o script de conexão require_once garante que a importação é feita somente uma vez */
 require_once "conecta.php";
 
